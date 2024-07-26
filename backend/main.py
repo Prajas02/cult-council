@@ -1,5 +1,8 @@
 from flask import Flask,render_template,request,session,redirect,url_for
 from flask_cors import CORS, cross_origin
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 cors = CORS(app)
