@@ -1,3 +1,10 @@
+.all-container{
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
 .container {
   width: 100%;
   height: 100vh;
@@ -10,13 +17,12 @@
   padding: 0px 20px;
   filter: blur(5px);
   -webkit-filter: blur(15px);
+  z-index: -20;
 }
 
 .focus {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative; 
+  transform: translate(5%, -110%);
   width: 90%;
   height: 500px;
   border-radius: 10px;
@@ -26,7 +32,7 @@
   align-items: center;
   background-color: rgb(0,0,0);
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 2;
+  z-index: 20;
 }
 
 /* This is for the card-component*/
@@ -89,4 +95,3 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
-
