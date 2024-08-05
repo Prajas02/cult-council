@@ -13,21 +13,21 @@ const Footer = () => {
     <div className='footer'>
       <div className="bg-gradient"></div>
       <div className="footlogo-container">
-        <img src='' alt='cult-logo' />
+        <img src='cultLogo.png' alt='cult Logo' className='logo'/>
       </div>
       <div className="footnav-container">
         <div className="social">
-          <span className='icon' style={{ backgroundImage: "url('https://th.bing.com/th/id/OIP.4bd2OBuugOExTZDZTpkrWQHaHY?w=198&h=197&c=7&r=0&o=5&dpr=1.8&pid=1.7')"}}><a href=""></a></span>
-          <span className='icon' style={{ backgroundImage: 'url()'}}><a href=""></a></span>
-          <span className='icon' style={{ backgroundImage: 'url()'}}><a href=""></a></span>
-          <span className='icon' style={{ backgroundImage: 'url()'}}><a href=""></a></span>
+        <a href="#" ><span className='icon' style={{ backgroundImage: "url('https://th.bing.com/th/id/OIP.4bd2OBuugOExTZDZTpkrWQHaHY?w=198&h=197&c=7&r=0&o=5&dpr=1.8&pid=1.7')"}}></span></a>
+        <a href="#"><span className='icon' style={{ backgroundImage: "url('https://www.pngitem.com/pimgs/m/2-25415_new-facebook-logo-2019-hd-png-download.png')"}}></span></a>
+        <a href="#"><span className='icon' style={{ backgroundImage: "url('https://th.bing.com/th/id/OIP.xXQbShWEEiWTs0G-ll_1CAAAAA?rs=1&pid=ImgDetMain')"}}></span></a>
+        <a href="#"><span className='icon' style={{ backgroundImage: "url('https://logos-world.net/wp-content/uploads/2020/11/Gmail-Logo.png')"}}></span></a>
         </div>
         <div className="navigation">
           <ul>
-            <li><a href="http"></a></li>
-            <li><a href="http"></a></li>
-            <li><a href="http"></a></li>
-            <li><a href="http"></a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Clubs</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">About Us</a></li>
           </ul>
         </div>
         <div className="contact">
