@@ -12,6 +12,7 @@ const Footer = () => {
           The third section should contain the contact us form*/
     <div className='footer'>
       <div className="bg-gradient"></div>
+      <div className="bg-gradientright"></div>
       <div className="footlogo-container">
         <img src='cultLogo.png' alt='cult Logo' className='logo'/>
       </div>

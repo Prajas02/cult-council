@@ -1,54 +1,47 @@
 import { AnimatePresence, motion, useTransform} from 'framer-motion'
 import './Clubs.css'
 
-const cardVar = {
-    initial: { x: "-50vw" },
-    visible: { x: 0 },
-    exit: { x: "-50vw" }
-}
+function ClubElem({ scrollYProgress,index, backImg,}) {
 
-const textVar = {
-    initial: { x: "100vw" },
-    visible: { x: 0 },
-    exit: { x: "100vw" }
-}
-
-function ClubElem({ scrollYProgress,index }) {
-
-    console.log(scrollYProgress)
     const scaleA = useTransform(scrollYProgress , [index,index + 0.5] , [1,0.8])
     const rotateA = useTransform(scrollYProgress , [index, index + 0.5] , [0 , -5])
 
     const scaleB = useTransform(scrollYProgress , [index, index+0.5] , [0.8,1])
     const rotateB = useTransform(scrollYProgress , [index, index+0.5] , [-5 , 0])
 
+    // the scrolly will give a value between 0 and 1
+
     return (
         <motion.div 
             className='all-container'
             style={
                 {scale: scrollYProgress < index ? scaleB : scaleA, 
-                rotate: scrollYProgress < index ? rotateA : rotateA
+                rotate: scrollYProgress < index ? rotateB : rotateA
             }}>
-            <div className="container"></div>
+            <div className="container"
+            style={{ backgroundImage: `url(${backImg})`}} 
+            initial={{opacity: 1}}
+            animate={{opacity: 0.2}}></div>
 
             <div className="focus">
                 <AnimatePresence>
                     <motion.div
                         className="card-container"
                     >
-                        <motion.div className="cards card-1"></motion.div>
-                        <motion.div className="cards card-2"></motion.div>
-                        <motion.div className="cards card-3"></motion.div>
-                        <motion.div className="cards card-4"></motion.div>
+                        <motion.div className="pCards card-1"></motion.div>
+                        <motion.div className="pCards card-2"></motion.div>
+                        <motion.div className="pCards card-3"></motion.div>
+                        <motion.div className="pCards card-4"></motion.div>
                     </motion.div>
                 </AnimatePresence>
 
                 <AnimatePresence>
                     <motion.div
                         className="club-text">
-                        <div className="cTitle">XYZ</div>
-                        <div className="cDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nihil ipsam facilis suscipit tempora deserunt magni molestias, eos eum obcaecati sequi ullam fugit, adipisci libero repellat? Sequi dignissimos ea reprehenderit.</div>
-                        <div className="cSecy">Hello World</div>
+                        <div className="cTitle">16 Pixels</div>
+                        <div className="cTagline">“Click a button, capture the world around in your digital world.”</div>
+                        <div className="cDesc">“16 Pixels”, the photography club at IITGN, captures every precious moment and shares it with the IITGN community. IITGN folks are also allowed to pursue their interest in photography. Numerous events, workshops and competitions are conducted to encourage students to learn and build professional photography skills.</div>
+                        <div className="cSecy"><strong><i>Club Seceratry:-</i></strong> Chandrabhan Patel</div>
                     </motion.div>
                 </AnimatePresence>
             </div>

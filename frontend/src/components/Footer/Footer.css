@@ -8,11 +8,13 @@
     position: absolute;
     width: 100%;
     height: 15rem;
-    /* background: linear-gradient(to right , purple , violet); */
+    /* background: linear-gradient(to bottom , rgb(255, 225, 220) 0% ,rgb(255, 157, 142) 10% ,rgb(246, 100, 75) 20% ,rgb(255, 138, 117) 40% ,rgb(247, 128, 107) 60% ,rgb(255, 85, 55) 80% ,rgb(116, 41, 255) 100%  ); */
 }
 
 .footlogo-container{
-    border: 1px solid black;
+    border: none;
+    outline: none;
+    border-radius: 10px;
     width: 30%;
     height: 100%;
     display: flex;
